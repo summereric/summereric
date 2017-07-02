@@ -99,6 +99,20 @@
             <div>
     <ul class="side-nav indigo darken-1" id="main-menu">
         
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="http://tva2.sinaimg.cn/crop.0.0.750.750.180/6f4454e3jw8ex2xfs69qzj20ku0kut9n.jpg" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">Summeric</p>
+                        <p class="desc">改变世界！</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
 
         
             <li class="no-padding">
@@ -204,7 +218,7 @@
 
 
             </div>
-            <time class="pink-link-context" datetime="2017-07-02T07:48:45.000Z"><a href="/2017/07/02/hello-world/">Jul 2 2017</a></time>
+            <time class="indigo-link-context" datetime="2017-07-02T07:48:45.000Z"><a href="/2017/07/02/hello-world/">Jul 2 2017</a></time>
 
             <span id="busuanzi_container_page_pv" class="read-times-container">
     <i class="fa fa-eye"></i>
@@ -213,12 +227,12 @@
 
             
 
-            <div class="toc pink-link-context hide-on-med-and-down">
+            <div class="toc indigo-link-context hide-on-med-and-down">
     <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Quick-Start"><span class="section table-of-contents-text">Quick Start</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Create-a-new-post"><span class="section table-of-contents-text">Create a new post</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Run-server"><span class="section table-of-contents-text">Run server</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Generate-static-files"><span class="section table-of-contents-text">Generate static files</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Deploy-to-remote-sites"><span class="section table-of-contents-text">Deploy to remote sites</span></a></li></ol></li></ol>
 </div>
 
 
-            <div class="entry pink-link-context">
+            <div class="entry indigo-link-context">
                 <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
@@ -247,12 +261,12 @@
 </div>
 
         <div class="fixed-action-btn float-sitemap">
-    <a class="btn-floating btn-large pink">
+    <a class="btn-floating btn-large green">
       <i class="fa fa-caret-square-o-up"></i>
     </a>
     <ul>
-      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
-      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+      <li><a class="btn-return-top btn-floating waves-effect blue" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse orange"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
     </ul>
   </div>
 
@@ -260,10 +274,9 @@
     <footer class="page-footer indigo darken-1">
     
 
-    <div class="footer-copyright pink-link-context">
+    <div class="footer-copyright indigo-link-context">
         <div class="container">
-            © 2016 example.com, All rights reserved.
-            <p class="right" style="margin-top: 0;">本博客由 <a href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+            © 2017 summeric, All rights reserved.
         </div>
     </div>
 </footer>
@@ -357,8 +370,11 @@
             $('li.tab a').hover(function() {
                 $(this).toggleClass('text-lighten-4');
             });
-            $('.indicator').addClass('pink lighten-2');
+            $('.indicator').addClass('green lighten-2');
 
+            
+            // 添加new标签
+            $('.menu-search').append('<span class="new badge pink"></span>');
             
 
             // 搜索功能
@@ -433,7 +449,7 @@
                             if (isMatch) {
                                 keywords.forEach(function(keyword) {
                                     var regS = new RegExp(keyword, "gi");
-                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword indigo lighten-2\">" + keyword + "</span>");
                                 });
 
                                 str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
@@ -455,7 +471,7 @@
                                     // highlight all keywords
                                     keywords.forEach(function(keyword) {
                                         var regS = new RegExp(keyword, "gi");
-                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword indigo lighten-2\">" + keyword + "</span>");
                                     });
 
                                     str += "<p class=\"search-result\">..." + match_content + "...</p>"
