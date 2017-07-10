@@ -7,7 +7,7 @@
 
     
 
-    <title>产品思维 | 改变世界!</title>
+    <title>Order_pay | 改变世界!</title>
     <meta name="author" content="Summer">
     
     <meta name="description" content="Summeric| PM | 作家 | 产品经理｜">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="Order_pay"/>
     <meta property="og:site_name" content="Summeric"/>
 
     
@@ -209,36 +209,126 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
         <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/案例/">案例</a>
+
 
         
-            <a class="breadcrumb" href="/categories/产品思维/">产品思维</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>Order_pay</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="indigo-link-context" datetime="2017-07-08T04:00:00.000Z"><a href="/2017/07/08/Order_pay/">Jul 8 2017</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2017/07/09/Open_mind/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-07-09T04:00:20.000Z">Jul 9 2017</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                Open_mind
-            </a>
-        
-            <a href="/2017/07/09/PM_Growth/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-07-09T04:00:00.000Z">Jul 9 2017</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                PM_Growth
-            </a>
+            <a href="/tags/工作复盘/" class="chip green accent-4">工作复盘</a>
         
     </div>
+
+
+            <div class="toc indigo-link-context hide-on-med-and-down">
+    
+</div>
+
+
+            <div class="entry indigo-link-context">
+                <p>用户线上购物流程大致可以分为这样几个阶段:<br>选品（网友推荐、编辑推荐、自己搜索……）–&gt;浏览商品详情–&gt;下单–&gt;支付商家发货、配送–&gt;用户收货满意/不满意退款<br><a id="more"></a><br>用户在线上完成消费的过程其实是产生数据、处理数据、读取数据的过程，每项数据定义一个名称。<br>举个例子，学生考试后出成绩的过程，应该有学生和成绩两部分信息，其中学生信息包含学号、姓名、年级、班级等，成绩信息包含学科、分数等。这样成绩单可能由1个表、2个表或者3个表来表示。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">学号</th>
+<th style="text-align:center">学科编号</th>
+<th style="text-align:center">成绩</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">99</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">95</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">学号</th>
+<th style="text-align:center">姓名</th>
+<th style="text-align:center">年级</th>
+<th style="text-align:center">班级｜</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">aaa</td>
+<td style="text-align:center">一年级</td>
+<td style="text-align:center">2班｜</td>
+</tr>
+</tbody>
+</table>
+<p>#1、下单－支付存储数据项<br>每个购物网站或者购物平台根据其特点可能会存储不同的数据项，就下单、支付过程说，应该基本如下所述。（如有不同欢迎指正）<br>下单即用户在某个购物网站生成订单orderno的过程，通常由这些信息构成：<br>Product、user、price、time、payment、status、source等。<br>其中product包含shopid、productid、skuid<br>User包含userid、address、name、cellphone、identityid（如果是海外购）<br>Time包含订单add_time、pay_time、deliver_time、receipt_time……<br>Price 包含total_price、discount_price、pay_price、<br>Payment即订单支付方式，是支付宝、微信、银联、applepay等其中一个<br>Status即订单目前的状态，一般由数值0 1 2 3等表示，如0表示未支付，1表示未发货（下方 的status类似）<br>Source即订单成交来源，目的是记录用户使用产品的行为<br>支付即生成订单后，用户使用某种支付渠道完成支付的过程，通常由这些信息构成：<br>Relation between orderno_tradeno、tradeno、out_tradeno<br>其中支付单tradeno 包含：businessid、tradeno、trade_type、payprice、status、creat_time、finish_time<br>Out_tradeno包含trade_type 、payprice、buyer_account、seller_account、status 、creattime、finishtime</p>
+<p>#2、下单－支付流程<br>了解订单和支付单有哪些信息之后，来看下下单-支付过程（以某电商平台为例）。<br>简化后的流程大致如下图：各业务生成支付单后发送给支付系统，支付系统用支付单向第三方支付系统发起支付请求，支付成功后，第三方支付系统会返回交易流水号。<br>业务A和业务B类似，由各自系统生成订单，用户有支付订单行为后，生成支付单。图中的区别点在于业务A允许多个订单合并支付，例如用户在购物车购买多个店铺的商品时。业务C不需要订单系统，则可以直接生成支付单。<br><img src="http://osvkkhvpq.bkt.clouddn.com/QQ20170710-221904@2x.png" alt=""><br>其实各业务系统与支付系统、支付系统和第三方支付交互过程，有更多的细节，以微信支付为例，模型如下图。涉及产品或系统有微信客户端wx_app、商户客户端merchant_app、商户业务服务系统merichant_server、商户支付系统merchant_pay_system、微信支付系统wx_pay_system。<br><em>动态支付图待补充</em></p>
+<p>#3、退款流程<br>退款流程与支付流程相似，商户退款系统、第三方支付的退款系统验证退款的真实有效后，将金额退还到用户账户中。一般是原路退回，即用户使用零钱支付，将金额退回到零钱；用户使用银行卡支付则退回到用户银行卡中。特殊情况比如用户使用微信的银行卡支付，退款到银行卡时发现用户的卡作废或者冻结了，导致原路退款银行卡失败，资金则退还到用户的零钱账户。<br><img src="http://osvkkhvpq.bkt.clouddn.com/QQ20170710-221914@2x.png" alt=""></p>
+<p>#4、提升支付成功率<br>支付成功是用户转化率的最后一步，对提升GMV、订单量等数据起到关键作用。提升支付成功率可从提升支付率、降低失败率、提升售后退款体验等几点进行考虑，具体可考虑优惠金额、不同环境、不同用户的支付方式适用性、支付体验。<br><img src="http://osvkkhvpq.bkt.clouddn.com/QQ20170710-221936@2x.png" alt=""></p>
+
+                
+<p class="indigo-link-context">
+    <a href="/2017/07/09/PM_Growth/" rel="next" title="PM_Growth">
+    上一篇：PM_Growth
+  </a>
+</p>
+
+
+
+<p class="indigo-link-context">
+    <a href="/2017/07/06/push/" rel="next" title="PUSH">
+    下一篇：PUSH
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
