@@ -254,15 +254,15 @@
 
 
             <div class="toc indigo-link-context hide-on-med-and-down">
-    
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#一、推送渠道"><span class="section table-of-contents-text">一、推送渠道</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#二、推送内容和时机"><span class="section table-of-contents-text">二、推送内容和时机</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#三、推送效果"><span class="section table-of-contents-text">三、推送效果</span></a></li></ol>
 </div>
 
 
             <div class="entry indigo-link-context">
                 <p>把消息传达给用户是所有产品必备功能之一。<br><a id="more"></a></p>
-<p>#一、推送渠道<br>按内容可以分为：服务型消息和营销型消息；按渠道可以分为产品系统内和系统外，详情见下图。<br><img src="http://osvkkhvpq.bkt.clouddn.com/QQ20170710-222516@2x.png" alt=""><br>A系统内的push是最常见的消息触达渠道，Push（推送）可以让用户在不打开应用的时候获取应用的消息更新。按系统可以分为安卓和ios推送。两者区别在于Apple自己部署了整个推送系统，所有的App都在同一控制域下，所以可以归一到系统层面控制，而且各类推送也不会太过分。一般流程是app的服务端向苹果服务器发送消息，苹果服务器根据IM消息识别告诉app发生了什么事。<br><img src="http://osvkkhvpq.bkt.clouddn.com/QQ20170710-222529@2x.png" alt=""><br>但是很多的Android应用都自己实现一套，在后台启动一个进程，与自己的服务器建立长链接来实现推送的功能，像QQ，微信，等等。一般APP会使用第三方推送平台实现推送功能，如友盟、信鸽等。<br><img src="http://osvkkhvpq.bkt.clouddn.com/QQ20170710-222547@2x.png" alt=""><br>B短信是运营常用的工具之一，通常比较重要的信息都通过短信触达用户。公司一般是使用短信平台，如梦网、百悟等，价格0.03~0.05元/条。短信中可以附带链接，用户可以直接访问推广页面，甚至可以直接打开APP。<br>C如果微信公账号是服务号，也通过认证，既可以通过模板消息或者客服消息向公众号粉丝推送消息。两种消息均需要用户与系统之间产生交互行为，如在系统下单、领取优惠券等。模板消息一般是在微信公众号后台添加或创建模板，根据需求将变量填入相应的字段后边，根据用户的openid推送至用户的微信客户端。如订单支付成功模板和用户接收后的图片。<br><img src="http://osvkkhvpq.bkt.clouddn.com/QQ20170710-222602@2x.png" alt=""><br>与模板消息相比，微信客服消息可以在消息中增加图片。如下图<br><img src="http://osvkkhvpq.bkt.clouddn.com/QQ20170710-222620@2x.png" alt=""></p>
-<p>#二、推送内容和时机<br>推送的内容和时机根据用户需求、运营需求以及推送渠道定制。用户需求一般跟使用产品功能的流程相关，如购物流程中的下单、支付、发货、物流送达、优惠券到期等。与用户息息相关的消息一般是及时推送，而营销消息根据产品每日高分的时间推送，一般是早上或晚上8~9点。</p>
-<p>#三、推送效果<br>推送效果从推送成功率和打开率衡量。经验来看安卓push的推送成功率在1.5%~3%左右，打开率10%~20%之间。微信消息的推送成功率可达到99%以上，打开率区间较广，在30%~70%之间。短信到达率一般在95%以上，打开率45%~50%之间。</p>
+<h1 id="一、推送渠道"><a href="#一、推送渠道" class="headerlink" title="一、推送渠道"></a>一、推送渠道</h1><p>按内容可以分为：服务型消息和营销型消息；按渠道可以分为产品系统内和系统外，详情见下图。<br><img src="http://osvkkhvpq.bkt.clouddn.com/QQ20170710-222516@2x.png" alt=""><br>A系统内的push是最常见的消息触达渠道，Push（推送）可以让用户在不打开应用的时候获取应用的消息更新。按系统可以分为安卓和ios推送。两者区别在于Apple自己部署了整个推送系统，所有的App都在同一控制域下，所以可以归一到系统层面控制，而且各类推送也不会太过分。一般流程是app的服务端向苹果服务器发送消息，苹果服务器根据IM消息识别告诉app发生了什么事。<br><img src="http://osvkkhvpq.bkt.clouddn.com/QQ20170710-222529@2x.png" alt=""><br>但是很多的Android应用都自己实现一套，在后台启动一个进程，与自己的服务器建立长链接来实现推送的功能，像QQ，微信，等等。一般APP会使用第三方推送平台实现推送功能，如友盟、信鸽等。<br><img src="http://osvkkhvpq.bkt.clouddn.com/QQ20170710-222547@2x.png" alt=""><br>B短信是运营常用的工具之一，通常比较重要的信息都通过短信触达用户。公司一般是使用短信平台，如梦网、百悟等，价格0.03~0.05元/条。短信中可以附带链接，用户可以直接访问推广页面，甚至可以直接打开APP。<br>C如果微信公账号是服务号，也通过认证，既可以通过模板消息或者客服消息向公众号粉丝推送消息。两种消息均需要用户与系统之间产生交互行为，如在系统下单、领取优惠券等。模板消息一般是在微信公众号后台添加或创建模板，根据需求将变量填入相应的字段后边，根据用户的openid推送至用户的微信客户端。如订单支付成功模板和用户接收后的图片。<br><img src="http://osvkkhvpq.bkt.clouddn.com/QQ20170710-222602@2x.png" alt=""><br>与模板消息相比，微信客服消息可以在消息中增加图片。如下图<br><img src="http://osvkkhvpq.bkt.clouddn.com/QQ20170710-222620@2x.png" alt=""></p>
+<h1 id="二、推送内容和时机"><a href="#二、推送内容和时机" class="headerlink" title="二、推送内容和时机"></a>二、推送内容和时机</h1><p>推送的内容和时机根据用户需求、运营需求以及推送渠道定制。用户需求一般跟使用产品功能的流程相关，如购物流程中的下单、支付、发货、物流送达、优惠券到期等。与用户息息相关的消息一般是及时推送，而营销消息根据产品每日高分的时间推送，一般是早上或晚上8~9点。</p>
+<h1 id="三、推送效果"><a href="#三、推送效果" class="headerlink" title="三、推送效果"></a>三、推送效果</h1><p>推送效果从推送成功率和打开率衡量。经验来看安卓push的推送成功率在1.5%~3%左右，打开率10%~20%之间。微信消息的推送成功率可达到99%以上，打开率区间较广，在30%~70%之间。短信到达率一般在95%以上，打开率45%~50%之间。</p>
 
                 
 <p class="indigo-link-context">
